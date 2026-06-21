@@ -1,0 +1,44 @@
+Algoritmo "Média com 5 notas"
+// Descrição   : Calcular e apresentar na tela a média de 5 notas.
+// Autor(a)    : Igor Amaral
+// Data atual  : 06/04/2026
+
+var
+   Aluno: caractere
+   Nota1 , Nota2 , Nota3, Nota4, Nota5 : real
+
+procedimento calculo (Nota1 , Nota2 , Nota3, Nota4, Nota5 : real)
+var
+
+   media : real
+
+inicio
+
+   media <- (Nota1 + Nota2 + Nota3 + Nota4 + Nota5) / 5
+   escreval ("-------------------------------------------------------")
+   escreval ("A média final é: " , media)
+   se (media >= 7) entao
+      escreval("Você está aprovado!!!")
+   senao (media < 7)
+      escreval ("Você está reprovado!!!")
+   fimse
+
+
+fimprocedimento
+
+Inicio
+   Escreva ("Digite o nome do aluno: ")
+   Leia (Aluno)
+   Escreva ("Digite a nota 1: " )
+   Leia (Nota1)
+   Escreva ("Digite a nota 2: " )
+   Leia (Nota2)
+   Escreva ("Digite a nota 3: " )
+   Leia (Nota3)
+   Escreva ("Digite a nota 4: " )
+   Leia (Nota4)
+   Escreva ("Digite a nota 5: " )
+   Leia (Nota5)
+   calculo(Nota1 , Nota2 , Nota3, Nota4, Nota5 : real)
+
+Fimalgoritmo
