@@ -1,0 +1,29 @@
+Algoritmo "nomesala"
+// Descrição   : Elabore um algoritmo que leia o nome e a idade
+//               de uma criança, então, de acordo com a idade,
+//               emita uma mensagem com o texto: “A sala de <>
+//               é a <>.” Naturalmente, substituindo o que
+//               está entre <>.
+// Autor(a)    : Igor Silva do Amaral
+// Data atual  : 25/04/2026
+Var
+   nome: caractere
+   idade: inteiro
+Inicio
+   escreva("Digite seu nome: ")
+   leia(nome)
+   escreva("Digite sua idade: ")
+   leia(idade)
+   escolha idade
+   caso 0,1,2
+      escreval("A sala de ", nome, " é a sala 1")
+   caso 3,4,5
+      escreval("A sala de ", nome, " é a sala 2")
+   caso 6,7,8
+      escreval("A sala de ", nome, " é a sala 3")
+   caso 9,10
+      escreval("A sala de ", nome, " é a sala 4")
+   outrocaso
+   escreval("A sala de ", nome, " é a sala 5")
+   fimescolha
+Fimalgoritmo
