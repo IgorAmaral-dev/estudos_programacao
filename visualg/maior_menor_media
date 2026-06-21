@@ -1,0 +1,42 @@
+Algoritmo "Maior, Menor e Media"
+// Descrição   : Verificação de qual dos 3 números é o maior. MEDIA
+// Autor(a)    : Igor Silva do Amaral
+// Data atual  : 11/05/2026
+
+Var
+   varNum1, varNum2, varNum3, varMedia, varMaior, varMenor: real
+   
+Inicio
+
+   escreval("Informe três números, separados por ENTER")
+   leia(varNum1,varNum2,varNum3)
+   varMedia <- (varNum1+varNum2+varNum3)/3
+   escreval("A média dos números é:",varMedia:2:2)
+   se varNum1 > varNum2 entao
+      se varNum1 > varNum3 entao
+         varMaior <- varNum1
+         se varNum2 > varNum3 entao
+            varMenor <- varNum3
+         senao
+            varMenor <- varNum2
+         fimse
+      senao
+         varMaior <- varNum3
+         varMenor <- varNum2
+      fimse
+   senao
+      se varNum2 > varNum3 entao
+         varMaior <- varNum2
+         se varNum1 > varNum3 entao
+            varMenor <- varNum3
+         senao
+            varMenor <- varNum1
+         fimse
+      senao
+         varMaior <- varNum3
+         varMenor <- varNum1
+      fimse
+   fimse
+   escreval("O maior número é", varMaior, " e o menor é:", varMenor)
+   
+Fimalgoritmo
