@@ -1,0 +1,52 @@
+Algoritmo "Media Aprovacao Ftec"
+// Descrição   : Ler notas, calcular a média (Utilizar a
+//             fórmula da Ftec disponibilizada no plano de
+//             ensino) e verificar se o aluno foi aprovado
+//             ou não. Informar o resultado.
+// Autor(a)    : Igor Amaral
+// Data atual  : 12/04/2026
+
+// -----------------------Abaixo segue procedimentos.----------------------------
+
+procedimento calculoMedia (grauA, grauB, grauC: real)
+
+var
+   media : real
+
+inicio
+   media <- (grauA + grauB) / 2
+   escreval ("-----------------------------------------------------------------")
+   escreval ("A sua média é: " , media)
+   se (media >= 7) entao
+      escreval ("Você está aprovado !!!")
+   senao (media < 7) entao
+      escreval ("Você está reprovado !!! Mas fique calmo, vamos fazer o grau C!")
+   fimse
+   se (media < 7) entao
+      escreva ("Digite a sua nota de Grau C: ")
+      leia (grauC)
+   fimse
+   media <- (grauA + grauB + grauC) / 3
+   escreval ("-----------------------------------------------------------------")
+   escreval ("A sua média é: " , media)
+   se (media >= 5) e (grauC >= 5) entao
+      escreval ("Você está aprovado !!!")
+   senao (media < 5) entao
+      escreval ("Você está reprovado !!!")
+   fimse
+
+fimprocedimento
+
+Var
+   grauA, grauB, grauC : real
+
+
+Inicio
+   escreva ("Digite a sua nota de Grau A: ")
+   leia (grauA)
+   escreva ("Digite a sua nota de Grau B: ")
+   leia (grauB)
+   calculoMedia (grauA, grauB, grauC : real)
+
+
+Fimalgoritmo
