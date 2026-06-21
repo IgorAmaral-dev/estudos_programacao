@@ -1,0 +1,63 @@
+Algoritmo "Calculando 2 Numeros"
+// Descrição   : Solicita dois números ao usuário e depois pergunta qual
+//               operação ele deseja realizar com eles. Informe as
+//               opções: +, -, /,* ou ^, respectivamente para soma,
+//               subtração, divisão, multiplicação ou potenciação. Realize
+//               a opção selecionada e apresente o resultado.
+// Autor(a)    : Igor Silva do Amaral
+// Data atual  : 11/05/2026
+
+Var
+varNum1, varNum2, varResultado, expo: real
+numPot: inteiro
+varOperacao: caractere
+
+Inicio
+varOperacao <- "S"
+enquanto (varOperacao <> "N") e (varOperacao <> "n") faca
+limpatela
+escreval("Informe dois números, separados por ENTER")
+leia(varNum1, varNum2)
+escreval("Agora, escolha qual operação deseja fazer com eles:")
+escreval("+ = SOMA")
+escreval("- = SUBTRAÇÃO")
+escreval("* = MULTIPLICAÇÃO")
+escreval("/ = DIVISÃO")
+escreval("^ = POTENCIAÇÃO")
+escreval("N = SAIR")
+leia(varOperacao)
+escolha varOperacao
+caso "+"
+varResultado <- varNum1 + varNum2
+caso "-"
+varResultado <- varNum1 - varNum2
+caso "*"
+varResultado <- varNum1 * varNum2
+caso "/"
+se varNum2 = 0 entao
+escreva("Divisão por zero não é possível.")
+senao
+varResultado <- varNum1 / varNum2
+fimse
+caso "^"
+escreval("Para qual dos números deseja realizar a operação? ")
+escreva("Digite 1 = primeiro número ou 2 = segundo número")
+leia(numPot)
+escreva("Qual o valor de expoente? ")
+leia(expo)
+escolha numPot
+caso 1
+varResultado <- varNum1 ^ expo
+caso 2
+varResultado <- varNum2 ^ expo
+outrocaso
+escreval("Opção inválida!!")
+fimescolha
+fimescolha
+escreval("O resultado da sua operação foi: ",varResultado)
+escreval("Se desejar fazer outro cálculo, precione ENTER: ")
+escreval("Caso contrário, digite N")
+leia(varOperacao)
+fimenquanto
+
+Fimalgoritmo
