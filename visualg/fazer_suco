@@ -1,0 +1,68 @@
+Algoritmo "Fazer Suco"
+// Descrição   : Descreve os passos para fazer um suco.
+// Autor(a)    : Igor Amaral
+// Data atual  : 06/04/2026
+
+Var
+   fruta : caractere
+   quantidade_frutas, lamina, jarra, acucar, liquidificador : inteiro
+
+Inicio
+   escreval ("VAMOS FAZER UM SUCO!!!")
+   escreval
+   escreval ("--------------------------------------------------")
+   escreva ("Qual a fruta vamos usar? ")
+   leia (fruta)
+   escreva ("E quantas(os) frutas vamos usar? ")
+   leia (quantidade_frutas)
+   escreval ("Você possui uma faca disponível?  ")
+   escreva("Digite 1 - Sim ou 2 - Não : ")
+   leia (lamina)
+   se (lamina = 1) entao
+      escreval ("vamos cortar as frutas ao meio.")
+   senao (lamina = 2) entao
+      escreval ("Vá até o mercado e compre uma faca.")
+   fimse
+   enquanto (lamina = 2) faca
+      escreval ("Já comprou um faca? ")
+      escreval ("Digite 1 - Sim ou 2 - Não : ")
+      leia (lamina)
+   fimenquanto
+   escreval("Vamos colocar as frutas cortadas dentro do liquidificador.")
+   escreval ("Você tem um liquidificador disponível?")
+   escreva ("Digite 1 - Sim ou 2 - Não : ")
+   leia (liquidificador)
+   se (liquidificador = 1) entao
+      escreval ("Vamos acrescentar 1 litro de água dentro do liquidificador.")
+   senao (liquidificador = 2) entao
+      escreval ("Vamos comprar ou conseguir emprestado um liquidificador.")
+   fimse
+   enquanto (liquidificador = 2) faca
+      escreval ("Conseguiu um liquidificador? ")
+      escreva ("Digite 1 - Sim ou 2 - Não : ")
+      leia (liquidificador)
+   fimenquanto
+   escreval ("Gostaria de adicionar açúcar? ")
+   escreva ("Digite 1 - Sim ou 2 - Não : ")
+   leia (acucar)
+   se (acucar = 1) entao
+      escreval ("Acrescente açúcar a gosto.")
+      escreval ("Ligue o liquidificador e misture.")
+   senao (acucar = 2)
+      escreval ("Ligue o liquidificador e faça a mistura do suco.")
+   fimse
+   escreval ("Sirva a mistura em uma jarra, tens uma disponível? ")
+   escreva ("Digite 1 - Sim ou 2 - Não : ")
+   leia (jarra)
+   se (jarra = 1) entao
+      escreval ("Suco pronto para consumo.")
+   senao (jarra = 2)
+      escreval ("Consiga ou compre uma jarra.")
+   fimse
+   enquanto (jarra = 2) faca
+      escreval ("Conseguiu uma jarra?")
+      escreva ("Digite 1 - Sim ou 2 - Não : ")
+      leia (jarra)
+   fimenquanto
+
+Fimalgoritmo
