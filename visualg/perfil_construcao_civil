@@ -1,0 +1,32 @@
+Algoritmo "Perfil Construcao Civil"
+// Descrição   : O algoritmo vai ler as informações de usuário
+//               para identificar o local e perfil que será
+//               construído o próximo prédio da construtora
+//               Ftec.
+// Autor(a)    : Igor Amaral
+// Data atual  : 06/04/2026
+Var
+   nome, cidade, bairro, morar_perto : caractere
+   quartos : inteiro
+
+
+Inicio
+   escreva ("Escreva o seu nome e sobrenome: ")
+   leia (nome)
+   escreva ("Qual a cidade que deseja morar? ")
+   leia (cidade)
+   escreva ("Qual bairro deseja morar? ")
+   leia (bairro)
+   escreva ("Gostaria de morar perto de algum ponto específico? ")
+   leia (morar_perto)
+   escreva ("Quantos quartos tem preferência? (Digite em números inteiros) ")
+   leia (quartos)
+   escreval ("-----------------------------------------------------------")
+   escreval ("Aqui estão as informações que você " , nome , " preencheu: ")
+   escreval ("Nome: " , nome)
+   escreval ("Cidade: " , cidade)
+   escreval ("Bairro: " , bairro)
+   escreval ("Números de quartos: " , quartos)
+
+
+Fimalgoritmo
