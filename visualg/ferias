@@ -1,0 +1,36 @@
+Algoritmo "ferias"
+// Descrição   : Deve receber os dados de nome e salário de funcionário, e apresentar
+//               o salário bruto, a quantia de adicional de férias, INSS e se o 
+//               funcionário deverá ou não pagar IRRF.
+// Autor(a)    : Igor Silva do Amaral
+// Data atual  : 26/04/2026
+Var
+// Seção de Declarações das variáveis 
+nome: caractere
+salario, ferias, total, inss, sem_inss: real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreva("Digite o nome do funcionário ")
+leia(nome)
+escreva("Digite o salário do funcionário ")
+leia(salario)
+ferias <- salario / 3
+total <- salario + ferias
+inss <- total * 0.11
+sem_inss <- total - inss
+
+escreval("NOME: ", nome)
+escreval("SALÁRIO BRUTO: R$", salario:8:2)
+escreval("ADICIONAL FÉRIAS: R$", ferias:8:2)
+escreval("INSS: R$", inss:8:2)
+escreval("TOTAL BRUTO: R$", total:8:2)
+
+se (total < 1903.98) entao
+escreva("O funcionário não terá desconto de IRRF.")
+senao (total > 1903.98) entao
+escreva("O funcionário terá que descontar IRRF.")
+fimse
+
+
+Fimalgoritmo
