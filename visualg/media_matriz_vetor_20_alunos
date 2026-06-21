@@ -1,0 +1,34 @@
+Algoritmo "MediaMatrizVetor20Alunos"
+// Descrição   : Recebe o nome do aluno, recebe suas duas notas e as apresenta na tela com sua 
+//               aprovação ou não e sua média.
+// Autor(a)    : Igor Amaral
+// Data atual  : 24/05/2026
+Var
+// Seção de Declarações das variáveis 
+ varNomes: vetor[1..20] de caractere
+ varNotas: vetor[1..20,1..2] de real
+ varMedias: vetor[1..20] de real
+ varContador1, varContador2: inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+para varContador1 de 1 ate 20 faca
+escreva("Digite o nome do aluno(a) número", varContador1," de 20:")
+leia(varNomes[varContador1])
+para varContador2 de 1 ate 2 faca
+escreva("Digite a nota",varContador2," do aluno(a) ", varNomes[varContador1],":")
+leia(varNotas[varContador1,varContador2])
+fimpara
+limpatela
+
+varMedias[varContador1] <- (varNotas[varContador1,1] + varNotas[varContador1,2]) /2
+fimpara
+
+para varContador1 de 1 ate 20 faca
+se (varMedias[varContador1] >= 7) entao
+escreval("O aluno(a)",varNomes[varContador1]," Foi aprovado com as notas(",varNotas[varContador1,1]," e ",varNotas[varContador1,2], ") e média:",varMedias[varContador1])
+senao
+escreval("O aluno(a)",varNomes[varContador1]," Foi reprovado com as notas(",varNotas[varContador1,1]," e ",varNotas[varContador1,2], ") e média:",varMedias[varContador1])
+fimse
+fimpara
+Fimalgoritmo
