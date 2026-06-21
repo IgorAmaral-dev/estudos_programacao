@@ -1,0 +1,88 @@
+Algoritmo "cardapio"
+// Descrição   : Apresente o menu abaixo e solicite que a pessoa
+//               escolha o número do prato, após a seleção, pergunte
+//               se a pessoa deseja pagar um gorjeta de 10% ao garçom.
+//               Caso aceite, o algoritmo deve acrescentar o valor da
+//               gorjeta ao valor do prato escolhido e informar o cliente
+//               da sua escolha (prato e preço final).
+// Autor(a)    : Igor Silva do Amaral
+// Data atual  : 25/04/2026
+procedimento cardapio
+inicio
+   escreval("----------CARDAPIO----------")
+   escreval("1 - Picanha --------R$ 65,00")
+   escreval("3 - Lasanha --------R$ 35,00")
+   escreval("6 - Strogonoff -----R$ 40,00")
+   escreval("8 - Costela --------R$ 38,00")
+   escreval("9 - Pão com Ovo-----R$ 12,00")
+   escreval("----------------------------")
+fimprocedimento
+
+var
+   opcao, garcom, opcard1 : inteiro
+   total_par, valorp, valorf, gorgeta: real
+   pratos_cardapio : caractere
+
+Inicio
+   total_par <- 0
+   opcard1 <- 0
+   pratos_cardapio <- ("")
+   repita
+   cardapio ()
+   escreva("Qual opção do cardapio deseja? ")
+   leia(opcao)
+   escolha opcao
+   caso 1
+      valorp <- 65.00
+      pratos_cardapio <- pratos_cardapio + "1 - Picanha --------R$ 65,00 | "
+   caso 3
+      valorp <- 35.00
+      pratos_cardapio <- pratos_cardapio + "3 - Lasanha --------R$ 35,00 | "
+   caso 6
+      valorp <- 40.00
+      pratos_cardapio <- pratos_cardapio + "6 - Strogonoff -----R$ 40,00 | "
+   caso 8
+      valorp <- 38.00
+      pratos_cardapio <- pratos_cardapio + "8 - Costela --------R$ 38,00 | "
+   caso 9
+      valorp <- 12.00
+      pratos_cardapio <- pratos_cardapio + "9 - Pão com Ovo-----R$ 12,00 | "
+   outrocaso
+      valorp <- 0
+      escreval("Opção do cardapio invalida!!")
+   fimescolha
+   
+   total_par <- total_par + valorp
+   
+   escreval("Deseja escolher mais algum item do cardapio? ")
+   escreva("Digite 1 - Sim ou 2 - Não ")
+   leia(opcard1)
+   limpatela
+   
+   ate (opcard1 = 2)
+
+
+se (total_par > 0) entao
+   escreval("RESUMO DO PEDIDO: ")
+   escreval("PEDIDO: ", pratos_cardapio)
+   escreval("TOTAL DO PEDIDO: R$", total_par:5:2)
+   escreval("----------------------------")
+   escreval("Gostaria de dar 10% de gorgeta ao garçom? ")
+   escreva("Digite 1 - Sim ou 2 - Não ")
+   leia(garcom)
+   se (garcom = 1) entao
+      gorgeta <- total_par * 0.10
+      valorf <- total_par + gorgeta
+      escreval("Você selecionou que quer dar gorgeta ao garçom.")
+   senao (garcom = 2) entao
+      valorf <- total_par
+      escreval("Você não quis dar gorgeta ao garçom.")
+   fimse
+fimse
+
+escreval("----------------------------")
+escreval("TOTAL FINAL DO PEDIDO: R$", valorf:5:2)
+escreval("----------------------------")
+
+
+Fimalgoritmo
