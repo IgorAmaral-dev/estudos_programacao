@@ -1,0 +1,56 @@
+Algoritmo "Perfil do Aluno"
+// Descrição   : O algoritmo visa ler e apresentar na tela os dados de
+//               sobrenome, curso, quantidade de filhos e nome da
+//               disciplina.
+// Autor(a)    : Igor Amaral
+// Data atual  : 06/04/2026
+Var
+   Sobrenome, disciplina, curso, dados: caractere
+   numero_filhos : inteiro
+
+Inicio
+   escreval ("**Perfil de Aluno**")
+   escreval ("Seja bem vindo(a) ao Perfil de Aluno!!")
+   escreval ("Aqui você irá preencher os dados solicitados para atualizar o seu perfil.")
+   escreva ("Escreva o seu sobrenome: ")
+   leia (sobrenome)
+   escreva ("Escreva o nome do seu curso: ")
+   leia (curso)
+   escreva ("Escreva o nome da disciplina: ")
+   leia (disciplina)
+   escreva ("Você tem quantos filhos (digite em numeros)? ")
+   leia (numero_filhos)
+   escreval
+   escreval ("Então conferindo os seus dados ficou o seguinte: ")
+   escreval ("Sobrenome: " ,  sobrenome)
+   escreval ("Curso: " , curso)
+   escreval ("Disciplina: " , disciplina)
+   escreval ("Quantidade de filhos: " , numero_filhos)
+   escreva ("Os dados estão corretos, responda com S ou N ? ")
+   leia (dados)
+   escreval
+   escreval
+   se (dados = "S")entao
+      escreva ("Obrigado(a) pela atualização e até mais!!")
+   senao (dados = "N") entao
+      enquanto (dados = "N") faca
+         escreva ("Escreva o seu sobrenome: ")
+         leia (sobrenome)
+         escreva ("Escreva o nome do seu curso: ")
+         leia (curso)
+         escreva ("Escreva o nome da disciplina: ")
+         leia (disciplina)
+         escreva ("Você tem quantos filhos (digite em numeros)? ")
+         leia (numero_filhos)
+         escreval
+         escreval ("Sobrenome: " ,  sobrenome)
+         escreval ("Curso: " , curso)
+         escreval ("Disciplina: " , disciplina)
+         escreval ("Quantidade de filhos: " , numero_filhos)
+         escreva ("Os dados estão corretos, responda com S ou N ? ")
+         leia (dados)
+      fimenquanto
+   fimse
+   escreva ("Obrigado(a) pela atualização e até mais!!")
+
+Fimalgoritmo
