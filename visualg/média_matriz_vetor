@@ -1,0 +1,33 @@
+Algoritmo "MediaMatrizVetor"
+// Descrição   : recebe o nome de 5 alunos, salva suas notas e faz sua média, 
+//               apresenta ao usuário somente 3 alunos com suas notas, médias e 
+//               aprovação ou não aprovação.
+// Autor(a)    : Igor Amaral
+// Data atual  : 24/05/2026
+Var
+ varNomes: vetor[1..5] de caractere
+ varNotas: vetor[1..5,1..3] de real
+ varMedias: vetor[1..5] de real
+ varContador1, varContador2: inteiro
+
+Inicio
+para varContador1 de 1 ate 5 faca
+escreva("Digite o nome do aluno(a) número", varContador1," de 5:")
+leia(varNomes[varContador1])
+para varContador2 de 1 ate 3 faca
+escreva("Digite a nota",varContador2," do aluno(a) ", varNomes[varContador1],":")
+leia(varNotas[varContador1,varContador2])
+fimpara
+limpatela
+
+varMedias[varContador1] <- (varNotas[varContador1,1] + varNotas[varContador1,2] + varNotas[varContador1,3]) /3
+fimpara
+
+para varContador1 de 1 ate 3 faca
+se (varMedias[varContador1] >= 7) entao
+escreval("O aluno(a)",varNomes[varContador1]," Foi aprovado com as notas(",varNotas[varContador1,1],",",varNotas[varContador1,2],",",varNotas[varContador1,3],") e média:",varMedias[varContador1])
+senao
+escreval("O aluno(a)",varNomes[varContador1]," Foi reprovado com as notas(",varNotas[varContador1,1],",",varNotas[varContador1,2],",",varNotas[varContador1,3],") e média:",varMedias[varContador1])
+fimse
+fimpara
+Fimalgoritmo
