@@ -1,0 +1,35 @@
+Algoritmo "NotaGrauA"
+// Descrição   : Faça o algoritmo calcular a sua nota do GRAU A conforme as
+//               regras da disciplina de algoritmos e programação I
+// Autor(a)    : Igor Silva do Amaral
+// Data atual  : 24/05/2026
+Var
+vetNota1: vetor[1..3] de real
+soma: real
+valiRepeticao: logico
+
+
+Inicio
+valiRepeticao <- verdadeiro
+
+enquanto (valiRepeticao = verdadeiro) faca
+escreval("Digite sua nota de participação (Máx 3.0): ")
+leia(vetNota1[1])
+escreval("Digite sua nota de atividade avaliativa (Máx 4.0): ")
+leia(vetNota1[2])
+escreval("Digite sua nota de trabalho final (Máx 3.0): ")
+leia(vetNota1[3])
+
+se (vetNota1[1] > 3) ou (vetNota1[2] > 4) ou (vetNota1[3] > 3) entao
+escreval("Erro: Nota fora das regras de GRAU A!! Digite novamente.")
+valiRepeticao <- verdadeiro
+senao
+valiRepeticao <- falso
+fimse
+fimenquanto
+
+soma <- vetnota1[1] + vetnota1[2] + vetnota1[3]
+escreval("------------------------------------")
+escreval("A sua nota de GRAU A é: " , soma)
+
+Fimalgoritmo
