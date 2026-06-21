@@ -1,0 +1,23 @@
+Algoritmo "Mostra numeros"
+// Descrição   : Faça o algoritmo apresentado a seguir: “Mostra números”
+//               utilizando os laços de repetição enquanto.
+// Autor(a)    : Igor Silva do Amaral
+// Data atual  : 11/05/2026
+
+Var
+varContador, varQuantidade: inteiro
+
+Inicio
+escreval("Esse algoritmo vai apresentar um sequência de X números")
+escreval("Quantos números deseja ver?")
+leia(varQuantidade)
+limpatela
+varContador <- 0
+repita
+varContador <- varContador + 1
+escreval(varContador)
+ate varContador = varQuantidade
+
+
+
+Fimalgoritmo
