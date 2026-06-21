@@ -1,0 +1,21 @@
+Algoritmo "Media com VETOR e com a funcao PARA"
+// Descrição   : Solicita 2 números e calcula a média deles
+// Autor(a)    : Igor Silva do Amaral
+// Data atual  : 18/05/2026
+Var
+   vetNum: vetor[1..2] de inteiro
+   varContador, varSoma: inteiro
+
+Inicio
+   escreval("informe dois números inteiros, separados por ENTER")
+   escreval("para o cálculo da média:")
+
+   para varContador de 1 ate 2 faca
+      leia(vetNum[varContador])
+      varSoma <- varSoma + vetNum[varContador]
+   fimpara
+   limpatela
+   escreval("O resultado da média é" , varSoma /2)
+   
+
+Fimalgoritmo
