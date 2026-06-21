@@ -1,0 +1,17 @@
+Algoritmo "Salario Silas"
+// Descrição   : O código deve receber a informação do salário de Silas, 
+//               depois fazer a conversão referente a quantia em reais 
+//               que Silas deve receber no período de um ano.
+// Autor(a)    : Igor Amaral
+// Data atual  : 12/04/2026
+Var
+conversao, salarioDolar : real
+
+Inicio
+salarioDolar <- 20000.00
+escreval ("O salário de Silas é US$ ", salarioDolar:5:2)
+conversao <- (20000.00 * 5.00)*12
+escreval ("O salário de Silas em reais de um ano é: R$" , conversao:8:2)
+
+
+Fimalgoritmo
