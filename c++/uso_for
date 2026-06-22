@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <locale.h>
+int main(){
+	setlocale(LC_ALL,"");
+	printf("Informe o número da base, para o ínicio da soma:\n");
+	int base, topo, soma, i;
+	scanf("%i", &base);
+	printf("Agora informe o número do topo da soma:\n");
+	scanf("%i", &topo);
+	if(topo<base){
+		printf("O topo da soma, não pode ser inferior à base dela!");
+	} else {
+		for(i=base; i<=topo; i++){
+			soma += i;
+		}
+		printf("A soma dos números é %i", soma);
+	}
+}
