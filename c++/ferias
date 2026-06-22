@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+	int salario;
+	double ferias, total;
+	printf("Digite o salário do funcionário\n");
+	scanf("%d", &salario);
+	ferias = salario /3.0;
+	total = salario + ferias;
+	printf("SALÁRIO BRUTO %d\n", salario);
+	printf("ADICIONAL DE FERIAS %lf\n", ferias);
+	printf("TOTAL BRUTO %lf\n", total);
+}
