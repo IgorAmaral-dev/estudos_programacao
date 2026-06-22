@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <locale.h>
+int main(void){
+	setlocale(LC_ALL,"");
+	printf("Informe a idade do atleta:\n");
+	int idade;
+	scanf("%i",&idade);
+	if(idade > -1){
+		switch(idade){
+			case 0 ... 4:
+				printf("Essa criança ainda é muito jovem para competir.");
+				break;
+			case 5 ... 7:
+				printf("A categoria dele será infantil A.");
+				break;
+			case 8 ... 10:
+				printf("A categoria dele será infantil B.");
+				break;
+			case 11 ... 13:
+				printf("A categoria dele será juvenil A.");
+				break;
+			case 14 ... 17:
+				printf("A categoria dele será juvenil B.");
+				break;
+			default:
+				printf("A categoria dele é Adulto.");
+		}
+	  }
+	}
