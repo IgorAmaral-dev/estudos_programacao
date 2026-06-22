@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <locale.h>
+int main(){
+	setlocale(LC_ALL, "");
+	printf("informe o nome da criança:\n");
+	char nome[100];
+	int idade, sala;
+	scanf("%[^'\n']s", &nome);
+	printf("Agora, diga a idade dela, para saber a sala.\n");
+	scanf("i", &idade);
+	if(idade>0){
+		switch(idade){
+			case 1 ... 2:
+				sala=1;
+				break;
+			case 3 ... 5:
+				sala=2;
+				break;
+			case 6 ... 8:
+				sala=3;
+				break;
+			default:
+				sala=4;
+		}
+		printf("A sala de %s é a %i", nome, sala);
+	} else {
+		printf("\nQuem ainda não nasceu, não pode estudar!");
+	}
+}
