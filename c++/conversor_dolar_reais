@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <locale.h>
+int main (){
+	setlocale(LC_ALL,"");
+	float varDolar;
+	printf("Qual a cotação atual do dólar americano?");
+	scanf("%f", &varDolar);
+	printf("Então, hoje US$ 1000 equivalem a R$ %.2f", varDolar * 1000);
+}
