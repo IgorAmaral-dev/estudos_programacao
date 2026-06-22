@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <locale.h>
+#include <string.h>
+int main(void){
+	setlocale(LC_ALL,"");
+	printf("Digite o nome da criança: ");
+	char nome[50];
+	fgets(nome, 50, stdin);
+	nome[strcspn(nome, "\n")]= '\0';
+	printf("Informe a idade da criança: ");
+	int idade;
+	scanf("%i",&idade);
+	if(idade > -1){
+		switch(idade){
+			case 0 ... 2:
+				printf("A sala de %s, é a sala 1.", nome);
+				break;
+			case 3 ... 5:
+				printf("A sala de %s é a sala 2.", nome);
+				break;
+			case 6 ... 8:
+				printf("A sala de %s é a sala 3.", nome);
+				break;
+			case 9 ... 10:
+				printf("A sala de %s é a sala 4.", nome);
+				break;
+		
+		}
+	  }
+	}
