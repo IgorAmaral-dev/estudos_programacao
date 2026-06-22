@@ -1,0 +1,41 @@
+Algoritmo "ControleEstoque"
+// Descrição   : Registro de estoque simples onde o usuário registra o nome do produto
+//               e a quantidade, depois o usuário recebe um alerta se a quantidade 
+//               cadastrada for maior ou menor que 10 unidades.
+// Autor(a)    : Igor Amaral
+// Data atual  : 24/05/2026
+Var
+   nomesProdutos: vetor[1..5] de caractere
+   quantidades: vetor[1..5] de inteiro
+   i: inteiro
+
+Inicio
+   escreval("===========================================")
+   escreval("------CADASTRO DE PRODUTOS NO ESTOQUE------")
+   escreval("===========================================")
+   escreval("")
+
+   para i de 1 ate 5 faca
+      escreva("Digite o nome do produto número ", i, ": ")
+      leia(nomesProdutos[i])
+      escreva("Digite a quantidade em estoque de ", nomesProdutos[i], ":")
+      leia(quantidades[i])
+      escreval("---------------------------------------------")
+   fimpara
+   limpatela
+
+   escreval("===========================================")
+   escreval("-------RELATÓRIO DE ALERTA DE ESTOQUE------")
+   escreval("===========================================")
+   escreval("")
+
+   para i de 1 ate 5 faca
+      se (quantidades[i] < 10) entao
+         escreval("ALERTA: O produto [", nomesProdutos[i], "] está com estoque CRÍTICO!! Apenas ", quantidades[i], " unidades.")
+      senao
+         escreval("OK: O produto [", nomesProdutos[i], "] está abastecido. Quantidade: ", quantidades[i],".")
+      fimse
+   fimpara
+
+
+Fimalgoritmo
