@@ -1,0 +1,31 @@
+Algoritmo "NumerosPrimos500a900"
+// Descrição   : Apresentao a quantidades de números primos entre 500 a 900 e apresenta o produto deles.
+// Autor(a)    : Igor Amaral
+// Data atual  : 24/05/2026
+
+Var
+varContador, i, n: inteiro
+varNum: vetor[1..400] de inteiro
+varProduto: real
+
+
+Inicio
+varProduto := 1
+para i de 500 ate 900 faca
+se ((i%2)<>0) e ((i%3)<>0) e ((i%5)<>0) e ((i%7)<>0) entao
+varContador := varContador + 1
+varNum[varContador] := i
+varProduto := varProduto * varNum[varContador]
+fimse
+fimpara
+para i de 1 ate varContador faca
+escreva (varNum[i]:3, " ")
+se (i%10 = 0) entao
+escreval(" ")
+fimse
+fimpara
+escreval("")
+escreval("O total de números primos é de ", varContador)
+escreval("O produto dos números é de ", varProduto:1:0)
+
+Fimalgoritm
