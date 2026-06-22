@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <locale.h>
+int main (){
+	setlocale(LC_ALL,"");
+	float pi;
+	pi = 3.1415;
+	printf("O valor de pi é %.2f", pi);
+} 
