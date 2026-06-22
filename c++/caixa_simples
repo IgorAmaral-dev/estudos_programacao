@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <locale.h>
+
+
+int main () {
+	setlocale(LC_ALL, "");
+	int nota10,nota20,nota50,saque;
+	
+	
+	printf("Informe o valor que deseja sacar (Notas de R$ 10, 20 ou 50) : R$");
+	scanf("%i",&saque);
+	
+	if (saque%10 !=0) {
+		printf("A menor nota que o caixa possui é de R$ 10,00. Tente novamente");
+	} else {
+		nota50 = (saque/50);
+		nota20 = ((saque%50)/20);
+		nota10 = (((saque%50)%20)/10);
+		
+		printf("Você irá sacar %i notas de R$50,00, %i de notas de R$20,00 e %i notas de R$10,00.",nota50,nota20,nota10);
