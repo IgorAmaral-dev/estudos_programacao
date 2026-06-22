@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <locale.h>
+int main(){
+	setlocale(LC_ALL,"");
+	float varNota1, varNota2, varNota3, varMedia;
+	printf("Informe as 3 notas, pressionando ENTER após cada uma: \n");
+	scanf("%f %f %f",&varNota1,&varNota2,&varNota3);
+	
+	varMedia = (varNota1 + varNota2 + varNota3) / 3;
+	
+	printf("A sua média foi %.1f\n",varMedia);
+	if(varMedia >= 7){
+		printf("Parabéns! Você foi aprovado!");
+		} else {
+			printf("Infelizmente você ainda não foi aprovado! \n");
+			printf("Precisará revisar o conteúdo!");
+  }
+}
