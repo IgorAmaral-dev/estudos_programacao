@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <locale.h>
+int main (){
+	setlocale(LC_ALL,"");
+	char nome [50];
+	float valor_vendas, percentual_comissao, comissao;
+	printf("Digite o nome do funcionário?\n");
+	fgets(nome,50,stdin);
+	printf("Digite o valor das vendas\n");
+	scanf("%f", &valor_vendas);
+	printf("Digite o percentual de comissão?\n");
+	scanf("%f", &percentual_comissao);
+	comissao = (valor_vendas*percentual_comissao)/100;
+	printf("O funcionário %s receberá comissão de: %.2f\n", nome, comissao);
+}
